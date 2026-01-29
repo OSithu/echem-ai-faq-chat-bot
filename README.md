@@ -34,7 +34,7 @@ The Google Gemini API was selected for the following reasons:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/OSithu/echem-ai-faq-chat-bot.git
    cd e-chem-chatbot
    ```
 

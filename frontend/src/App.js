@@ -96,19 +96,34 @@ function App() {
     sendMessage(question);
   };
 
+  const handleReset = () => {
+    setMessages([]);
+    setInput('');
+    setLoading(false);
+  };
+
   return (
     <div className="App">
       <div className="chatbot-container">
         <div className="chatbot-header">
-          <h2>e-Chem Chatbot</h2>
-          <p>Ask anything about chemistry and results</p>
+          <div className="header-content">
+            <div>
+              <h2>e-Chem Chatbot</h2>
+              <p>Ask anything about chemistry and results</p>
+            </div>
+            {messages.length > 0 && (
+              <button className="reset-button" onClick={handleReset} title="Reset conversation">
+                ↻
+              </button>
+            )}
+          </div>
         </div>
         
         <div className="messages-container">
           {messages.length === 0 ? (
-            <div style={{ textAlign: 'center', color: '#999', marginTop: '30px', marginBottom: '30px' }}>
-              <p style={{ fontSize: '16px', marginBottom: '10px' }}>Welcome to e-Chem Chatbot!</p>
-              <p style={{ fontSize: '13px', marginBottom: '30px' }}>Start a conversation by typing your question or selecting one below.</p>
+            <div className="welcome-message">
+              <p style={{ fontSize: '16px' }}>Welcome to e-Chem Chatbot!</p>
+              <p style={{ fontSize: '13px' }}>Start a conversation by typing your question or selecting one below.</p>
             </div>
           ) : (
             messages.map((msg, i) => (

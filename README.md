@@ -92,7 +92,7 @@ The Laravel backend will be available at `http://localhost:8000`
    ```bash
    npm start
    ```
-   
+
 The React frontend will be available at `http://localhost:3000`
 
 ### Access the Chatbot
@@ -147,6 +147,5 @@ The bot is grounded in the following e-Chem data:
 
 ### Frontend
 - **Framework**: React
-- **Build Tool**: Vite
 - **Styling**: CSS
 

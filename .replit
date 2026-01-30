@@ -1,0 +1,2 @@
+run = "bash start-repl.sh"
+language = "bash"
